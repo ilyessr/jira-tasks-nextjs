@@ -28,7 +28,7 @@ const TaskList: React.FC = () => {
           throw new Error("Received data is not in the expected format");
         }
         setTasks(data.issues);
-      } catch (error) {
+      } catch (error: any) {
         console.error("Error fetching Jira tasks: ", error);
         setError(error.message);
       } finally {
